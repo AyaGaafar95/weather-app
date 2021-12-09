@@ -1,0 +1,11 @@
+<label for="cars">Choose a city:</label>
+<!--
+  TODO:
+كل عنصر في السيتيز => هسميه سيتي واعرضلي هذا السيتى وبس
+[value]="city"ممكن اكتب كدهvalue="{{ city }}" بدل كده في الفاليو
+-->
+
+<select name="cars" id="cars">
+  <option disabled selected hidden>city</option>
+  <option value="{{ city }}" *ngFor="let city of cities">{{ city }}</option>
+</select>
