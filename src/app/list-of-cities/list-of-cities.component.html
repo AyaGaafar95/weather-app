@@ -9,4 +9,7 @@
   <option disabled selected hidden>city</option>
   <option value="{{ city }}" *ngFor="let city of cities">{{ city }}</option>
 </select>
+<!-- <button (click)="goToEdit(food._id)" class="bt2 btn"> -->
+<br />
+<button (click)="goToCityInfo(nameOfSelectedCity)" class="bt2 btn">done</button>
 <p>{{ nameOfSelectedCity }}</p>
