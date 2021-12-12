@@ -9,6 +9,10 @@ import { InformationService } from '../Services/information.service';
 })
 export class WeatherInfoComponent implements OnInit {
   tempreature = '';
+  time = '';
+  dayTime = false;
+  night = false;
+
   constructor(
     private activatedRoute: ActivatedRoute,
     private information: InformationService
@@ -29,6 +33,13 @@ export class WeatherInfoComponent implements OnInit {
         .getCityInformation(cityNameValue)
         .subscribe((serviceData: any) => {
           this.tempreature = serviceData.main.temp;
+          this.time = serviceData.weather[0].icon;
+          if (this.time.includes('d')) {
+            this.dayTime = true;
+          }
+          if (this.time.includes('n')) {
+            this.night = true;
+          }
         });
     });
   }
