@@ -10,6 +10,7 @@ import { InformationService } from '../Services/information.service';
 export class WeatherInfoComponent implements OnInit {
   tempreature = '';
   time = '';
+  name = '';
   dayTime = false;
   night = false;
 
@@ -20,6 +21,8 @@ export class WeatherInfoComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.paramMap.subscribe((data: ParamMap) => {
+      console.log(data);
+
       // TODO: cityNamevalue => default value
       let cityNameValue = 'Cairo';
       //
@@ -33,6 +36,7 @@ export class WeatherInfoComponent implements OnInit {
         .getCityInformation(cityNameValue)
         .subscribe((serviceData: any) => {
           this.tempreature = serviceData.main.temp;
+          this.name = serviceData.name;
           this.time = serviceData.weather[0].icon;
           if (this.time.includes('d')) {
             this.dayTime = true;

@@ -1,5 +1,12 @@
-<p>weather-info works!</p>
-<img *ngIf="dayTime" src="assets/day.jpg" />
-<img *ngIf="night" src="assets/night.jpg" />
-
-<p>{{ tempreature | number: "1.0-0" }} &deg;</p>
+<div class="container">
+  <p class="name">
+    <span> {{ name }}</span> Time,temp
+  </p>
+  <div class="img-cont">
+    <img class="small" *ngIf="dayTime" src="assets/day.jpg" />
+    <img class="small" *ngIf="night" src="assets/night.jpg" />
+    <p class="temp">{{ tempreature | number: "1.0-0" }} &deg;</p>
+  </div>
+  <img class="big" *ngIf="dayTime" src="assets/نهار 1.jpg" />
+  <img class="big" *ngIf="night" src="assets/night_2.jpg" />
+</div>
