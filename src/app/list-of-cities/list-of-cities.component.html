@@ -1,14 +1,23 @@
-<label for="cars">Choose a city:</label>
-<!--
+<div class="all-element-here">
+  <div class="center">
+    <h1>Choose a city : <i class="far fa-grin-alt"></i></h1>
+    <!--
   TODO:
 كل عنصر في السيتيز => هسميه سيتي واعرضلي هذا السيتى وبس
 [value]="city"ممكن اكتب كدهvalue="{{ city }}" بدل كده في الفاليو
 -->
-
-<select (change)="selectCity($event)">
-  <option disabled selected hidden>city</option>
-  <option value="{{ city }}" *ngFor="let city of cities">{{ city }}</option>
-</select>
-<!-- <button (click)="goToEdit(food._id)" class="bt2 btn"> -->
-<br />
-<button (click)="goToCityInfo(nameOfSelectedCity)" class="bt2 btn">done</button>
+    <div class="sb">
+      <select (change)="selectCity($event)">
+        <option disabled selected hidden>city</option>
+        <option value="{{ city }}" *ngFor="let city of cities">
+          {{ city }}
+        </option>
+      </select>
+      <!-- <button (click)="goToEdit(food._id)" class="bt2 btn"> -->
+      <br />
+      <button class="myButton" (click)="goToCityInfo(nameOfSelectedCity)">
+        Ok
+      </button>
+    </div>
+  </div>
+</div>
