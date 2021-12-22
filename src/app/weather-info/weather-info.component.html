@@ -1,13 +1,15 @@
 <div class="container">
   <img *ngIf="dayTime" src="assets/sunny2.png" />
+  <img *ngIf="night" class="moon" src="assets/moon.png" />
   <p class="name">
-    <span> {{ name }}</span>
+    <span [ngClass]="{ changespan: night }"> {{ name }}</span>
   </p>
   <div class="img-cont">
     <img class="small" *ngIf="dayTime" src="assets/day.jpg" />
-    <img class="small" *ngIf="night" src="assets/night.jpg" />
-    <p class="temp">{{ tempreature | number: "1.0-0" }} &deg;</p>
+    <img class="small smallmoon" *ngIf="night" src="assets/night.jpg" />
+    <p [ngClass]="{ white: night, temp: !night }">
+      {{ tempreature | number: "1.0-0" }} &deg;
+    </p>
   </div>
-  <img class="big" *ngIf="dayTime" src="assets/نهار 1.jpg" />
   <img class="big" *ngIf="night" src="assets/night_2.jpg" />
 </div>
