@@ -89,7 +89,7 @@ option {
 }
 @media (max-width: 1024px) {
   img {
-    width: 200px;
+    width: 250px;
   }
   .center {
     margin: auto;
@@ -115,4 +115,31 @@ option {
   }
 }
 @media (max-width: 750px) {
+  img {
+    width: 100px;
+  }
+  .center {
+    margin: auto;
+    margin-top: 40%;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  select {
+    border-radius: 17px;
+    font-size: 1.2em;
+    padding-left: 3%;
+  }
+  option {
+    font-size: 1em;
+    font-weight: lighter;
+    height: auto;
+    padding: 0;
+    width: 20%;
+  }
+  .myButton {
+    font-size: 17px;
+  }
 }
+
+/* filter: drop-shadow(0 0 0.75rem crimson); */
