@@ -8,7 +8,7 @@
 كل عنصر في السيتيز => هسميه سيتي واعرضلي هذا السيتى وبس
 [value]="city"ممكن اكتب كدهvalue="{{ city }}" بدل كده في الفاليو
 -->
-    <div class="sb">
+    <div class="select-container">
       <select (change)="selectCity($event)">
         <option disabled selected hidden>city</option>
         <option value="{{ city }}" *ngFor="let city of cities">

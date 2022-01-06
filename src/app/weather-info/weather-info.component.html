@@ -1,6 +1,5 @@
 <div class="container">
   <img class="sun" *ngIf="dayTime" src="assets/sunny2.png" />
-  <!-- <img *ngIf="night" class="moon" src="assets/moon.png" /> -->
   <p class="name" [ngClass]="{ 'night-space': night, 'sunny-space': !night }">
     <span [ngClass]="{ changespan: night }"> {{ name }}</span>
   </p>
