@@ -57,6 +57,9 @@ span:hover {
   text-shadow: -16px 5px 15px #09424d;
   color: #e9e5dc;
 }
+span {
+  transition: all 0.5s ease-in-out;
+}
 .name {
   font-size: 5em;
   font-weight: lighter;
@@ -66,7 +69,6 @@ span:hover {
   font-weight: bolder;
   text-shadow: -16px 5px 15px #035361;
   cursor: default;
-  transition: all 0.5s ease-in-out;
 }
 .night-space {
   margin-top: auto;
