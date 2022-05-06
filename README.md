@@ -1,6 +1,8 @@
 # WeatherApp
 
-This is an HTML5 & CSS3 & typescript "Angular" project . It’s about creating a responsive project about weather 
+This is an HTML5 & CSS3 & typescript "Angular" project . It’s about creating a responsive project about weather .
+Cool project about the weatherThe user can choose the countryhe wants to know its weather and
+timing
 
 You can take a look at the deployed link here: https://weather-app-weld-three.vercel.app/
 
